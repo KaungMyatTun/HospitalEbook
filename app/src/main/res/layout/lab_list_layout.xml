@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:background="#8FBC8F"
+    android:layout_below="@id/heading_part"
+    android:paddingBottom="8dp">
+
+    <!--<CheckBox-->
+        <!--android:id="@+id/LB_SelectItemCheckBox"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#ffffff"-->
+        <!--android:clickable="false"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="# "-->
+        <!--android:textSize="16dp"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:background="#ffffff"-->
+        <!--android:gravity="center"-->
+        <!--android:id="@+id/lab_id"-->
+        <!--android:layout_marginLeft="0dp"-->
+        <!--android:layout_weight=".4"/>-->
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Date / Time"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/lab_date_time"
+        android:layout_marginLeft="0dp"
+        android:layout_weight="1.5"
+        android:maxLines="2"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Ordering MD"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/lab_ordering_md"
+        android:layout_weight="2"
+        android:maxLines="3"/>
+
+    <TextView
+        android:id="@+id/lab_procedure"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:maxLines="3"
+        android:text="Procedures"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:background="#ffffff"
+        android:textSize="16dp"
+        android:layout_weight="2" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Urgent"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/lab_urgent_flag"
+        android:layout_weight="1"/>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Exam Date / Time"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/lab_exam_date_time"
+        android:layout_weight="2"
+        android:maxLines="2"/>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Comment"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/lab_comment"
+        android:layout_weight="2"
+        android:maxLines="3"/>
+
+
+</LinearLayout>

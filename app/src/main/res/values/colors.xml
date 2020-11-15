@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8FBC8F</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="gray_bg">#e2e2e2</color>
+    <color name="kitkat_gray_light">#19000000</color>
+    <color name="selected">#8833B5E5</color>
+    <color name="text_color">#b9000000</color>
+    <color name="text_color_lighter">#9b000000</color>
+    <color name="location_text">@color/text_color_lighter</color>
+    <color name = "dialog_button_color">#757575</color>
+    <color name = "request_admin_password_text">#ff0000</color>
+    <color name="black">#000000</color>
+    <color name="dark_blue">#00008b</color>
+    <color name = "tabListColor">#6495ED</color>
+
+    <color name="reg_color">#90EE90</color>
+    <color name="completed_color">#90EE91</color>
+    <color name="sent_color">#ADD8E6</color>
+    <color name="stopped_color">#ffb6c1</color>
+    <color name="held_color">#FFFFE0</color>
+    <color name="reactivated_color">#e2e2e2</color>
+    <color name="scheduled_color">#8FBC8B</color>
+    <color name="edited_color">#808000</color>
+    <color name="incomplete_color">#6495ED</color>
+</resources>

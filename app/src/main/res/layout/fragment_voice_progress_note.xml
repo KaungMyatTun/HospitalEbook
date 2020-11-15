@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Voice Progress Note"
+        android:textSize="16dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/mic"
+        android:layout_width="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/label"
+        android:layout_height="30dp"
+        android:src="@drawable/mic"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/label"
+        android:id="@+id/searview_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:elevation="1dp"
+        android:innerRadius="0dp"
+        android:padding="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:cardCornerRadius="3dp">
+
+        <TextView
+            android:id="@+id/result_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:scrollbars="vertical"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </androidx.cardview.widget.CardView>
+
+<!--    <Button-->
+<!--        android:id="@+id/recognize_mic"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/searview_id"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:text="Mic" />-->
+</RelativeLayout>

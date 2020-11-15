@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="115dp"
+    android:orientation="horizontal"
+    android:background="#8FBC8F"
+    android:paddingBottom="7dp">
+
+    <RelativeLayout
+        android:id="@+id/dialog_patientInfo_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/curved_shape_for_dialog">
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/listID"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<ImageView-->
+                <!--android:id="@+id/pic"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/visit_history_item_ic"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_marginLeft="3dp"/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/number"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="1"-->
+                <!--android:textSize="16dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_toRightOf="@id/pic"-->
+                <!--android:layout_marginLeft="5dp"/>-->
+        <!--</RelativeLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2.2">
+
+                <TextView
+                    android:id="@+id/reg_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reg# :"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txt_discharge_date"
+                    android:layout_toRightOf="@id/reg_label"
+                    android:text="A*18-000001"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/reg_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reg_label"
+                    android:layout_marginTop="10dp"
+                    android:text="Reg# Date :"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_reg_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txt_discharge_date"
+                    android:layout_below="@id/txt_reg"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/reg_date_label"
+                    android:maxLines="2"
+                    android:text="11/9/2018 12:12"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/discharge_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reg_date_label"
+                    android:layout_marginTop="10dp"
+                    android:text="Discharge Date :"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_discharge_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_reg_date"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/discharge_date_label"
+                    android:maxLines="2"
+                    android:text="11/9/2018 12:12"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.8">
+
+                <TextView
+                    android:id="@+id/attending_doc_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Attending Doctor :"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_adDoctor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/attending_doc_label"
+                    android:maxLines="2"
+                    android:text="Prof . U Maung Maung Maung Maung"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/queue_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/attending_doc_label"
+                    android:layout_marginTop="10dp"
+                    android:text="Queue # :"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_queue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txt_adDoctor"
+                    android:layout_below="@id/txt_adDoctor"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/queue_label"
+                    android:text="11/9/2018 12:12 50:00"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/reg_cancelCmt_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/queue_label"
+                    android:layout_marginTop="10dp"
+                    android:text="Reg# Cancel Cmt:"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_reg_cancelCmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txt_adDoctor"
+                    android:layout_below="@id/txt_queue"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/reg_cancelCmt_label"
+                    android:maxLines="1"
+                    android:text="11/9/2018 12:12 50:00"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

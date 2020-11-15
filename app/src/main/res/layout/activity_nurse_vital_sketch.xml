@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentChild"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ad86f051">
+
+    <LinearLayout
+        android:id="@+id/drawing_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fafafa"
+        android:orientation="vertical"
+        android:clickable="false">
+
+
+        <com.anzer.hospitalebook.models.views.NurseVitalSketchView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/drawing"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/eraserView"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/eraser_view_background"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/sketch_stroke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9dp"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/stroke"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="0dp"
+                    android:src="@drawable/ic_brush_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sketch_stroke"
+                    android:paddingLeft="13dp"
+                    android:text="Brush" />
+
+                <ImageView
+                    android:id="@+id/sketch_eraser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9dp"
+                    android:layout_toRightOf="@+id/sketch_stroke"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/eraser"
+                    android:paddingLeft="20dp"
+                    android:src="@drawable/ic_eraser_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sketch_eraser"
+                    android:layout_toRightOf="@+id/sketch_stroke"
+                    android:paddingLeft="15dp"
+                    android:text="Eraser" />
+
+                <ImageView
+                    android:id="@+id/sketch_undo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_toRightOf="@id/sketch_eraser"
+                    android:layout_weight="2"
+                    android:alpha="0.4"
+                    android:background="@null"
+                    android:contentDescription="@string/undo"
+                    android:paddingLeft="20dp"
+                    android:src="@drawable/ic_undo_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sketch_undo"
+                    android:layout_toRightOf="@id/sketch_eraser"
+                    android:paddingLeft="20dp"
+                    android:text="Undo" />
+
+                <ImageView
+                    android:id="@+id/sketch_redo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_toRightOf="@id/sketch_undo"
+                    android:layout_weight="2"
+                    android:alpha="0.4"
+                    android:contentDescription="@string/redo"
+                    android:paddingLeft="20dp"
+                    android:src="@drawable/ic_redo_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sketch_redo"
+                    android:layout_toRightOf="@id/sketch_undo"
+                    android:paddingLeft="20dp"
+                    android:text="Redo" />
+
+                <!--<ImageView-->
+                <!--android:id="@+id/sketch_erase"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:layout_marginTop="9dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="2"-->
+                <!--android:contentDescription="@string/colors"-->
+                <!--android:src="@drawable/ic_delete_red_48dp"-->
+                <!--android:layout_toRightOf="@id/sketch_redo"/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Erase All"-->
+                <!--android:paddingLeft="13dp"-->
+                <!--android:layout_toRightOf="@id/sketch_redo"-->
+                <!--android:layout_below="@id/sketch_erase"/>-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/preview_images"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:paddingLeft="17dp"-->
+                <!--android:layout_marginTop="9dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="2"-->
+                <!--android:contentDescription="@string/colors"-->
+                <!--android:src="@drawable/preview_images"-->
+                <!--android:layout_toRightOf="@id/sketch_redo"/>-->
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Preview"-->
+                <!--android:paddingLeft="7dp"-->
+                <!--android:layout_toRightOf="@id/sketch_redo"-->
+                <!--android:layout_below="@id/preview_images"/>-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/next_page"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:paddingLeft="20dp"-->
+                <!--                    android:layout_marginTop="9dp"-->
+                <!--                    android:layout_weight="2"-->
+                <!--                    android:contentDescription="@string/colors"-->
+                <!--                    android:src="@drawable/fab_bg_image"-->
+                <!--                    android:layout_toRightOf="@id/sketch_redo" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="New"-->
+                <!--                    android:paddingLeft="20dp"-->
+                <!--                    android:paddingRight="10dp"-->
+                <!--                    android:layout_toRightOf="@id/sketch_redo"-->
+                <!--                    android:layout_below="@id/next_page"/>-->
+                <ImageView
+                    android:id="@+id/complete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/sketch_redo"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/colors"
+                    android:paddingLeft="20dp"
+                    android:src="@drawable/complete" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/complete"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/sketch_redo"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:text="Save" />
+
+                <!--                <View-->
+                <!--                    android:id="@+id/line_separator"-->
+                <!--                    android:layout_width="1dp"-->
+                <!--                    android:layout_height="fill_parent"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:layout_marginLeft="5dp"-->
+                <!--                    android:background="@android:color/black"-->
+                <!--                    android:layout_toRightOf="@id/complete"/>-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/patientInfo"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:paddingLeft="35dp"-->
+                <!--                    android:layout_marginRight="20dp"-->
+                <!--                    android:layout_marginTop="9dp"-->
+                <!--                    android:layout_weight="2"-->
+                <!--                    android:contentDescription="@string/colors"-->
+                <!--                    android:src="@drawable/patient_info"-->
+                <!--                    android:layout_toRightOf="@id/line_separator" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text= "Patient Info"-->
+                <!--                    android:paddingLeft="10dp"-->
+                <!--                    android:paddingRight="10dp"-->
+                <!--                    android:layout_toRightOf="@id/line_separator"-->
+                <!--                    android:layout_below="@id/patientInfo"/>-->
+
+                <!--                <View-->
+                <!--                    android:id="@+id/line_separator2"-->
+                <!--                    android:layout_width="1dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:layout_marginLeft="10dp"-->
+                <!--                    android:background="@drawable/dotted_vertical_line"-->
+                <!--                    android:layout_toRightOf="@id/patientInfo"/>-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/visitHistory"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:paddingLeft="30dp"-->
+                <!--                    android:layout_marginRight="20dp"-->
+                <!--                    android:layout_marginTop="9dp"-->
+                <!--                    android:layout_weight="2"-->
+                <!--                    android:contentDescription="@string/colors"-->
+                <!--                    android:src="@drawable/visity_history"-->
+                <!--                    android:layout_toRightOf="@id/line_separator2" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text= "Visit History"-->
+                <!--                    android:paddingLeft="20dp"-->
+                <!--                    android:paddingRight="20dp"-->
+                <!--                    android:layout_toRightOf="@id/patientInfo"-->
+                <!--                    android:layout_below="@id/visitHistory"/>-->
+                <!--                <View-->
+                <!--                    android:id="@+id/line_separator3"-->
+                <!--                    android:layout_width="1dp"-->
+                <!--                    android:layout_height="fill_parent"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:layout_marginLeft="15dp"-->
+                <!--                    android:background="@drawable/dotted_vertical_line"-->
+                <!--                    android:layout_toRightOf="@id/visitHistory"/>-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/viewOrderHistory"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:paddingLeft="30dp"-->
+                <!--                    android:layout_marginRight="20dp"-->
+                <!--                    android:layout_marginTop="9dp"-->
+                <!--                    android:layout_weight="2"-->
+                <!--                    android:contentDescription="@string/colors"-->
+                <!--                    android:src="@drawable/view_order_history"-->
+                <!--                    android:layout_toRightOf="@id/line_separator3" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text= "View Order"-->
+                <!--                    android:paddingLeft="10dp"-->
+                <!--                    android:paddingRight="10dp"-->
+                <!--                    android:layout_toRightOf="@id/line_separator3"-->
+                <!--                    android:layout_below="@id/viewOrderHistory"/>-->
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/LabnDI"
+        android:icon= "@drawable/plus_icon"
+        android:title="LAB And DI"/>
+    <item
+        android:id="@+id/camera_action"
+        android:icon= "@drawable/camera"
+        android:title="Take Photo"/>
+    <item
+        android:id="@+id/progress_note_action"
+        android:icon = "@drawable/fab_bg_image"
+        android:title="Progress Note"/>
+    <item android:id="@+id/voice_progress_note"
+        android:icon="@drawable/voice_recognition"
+        android:title="Voice Progress Note"/>
+    <item
+        android:id="@+id/add_HWOrder_action"
+        android:icon = "@drawable/fab_bg_image"
+        android:title="Handwriting Order"
+        />
+
+
+    <!--<item-->
+        <!--android:id="@+id/ph_order_action"-->
+        <!--android:icon = "@drawable/fab_bg_image"-->
+        <!--android:title="PH Order"/>-->
+
+
+
+    <!--<item-->
+        <!--android:id="@+id/di_order_action"-->
+        <!--android:icon = "@drawable/fab_bg_image"-->
+        <!--android:title="DI Order"/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/lab_order_action"-->
+        <!--android:icon = "@drawable/fab_bg_image"-->
+        <!--android:title="LAB Order"/>-->
+
+
+    <!--<item-->
+        <!--android:id="@+id/consumable_order_action"-->
+        <!--android:icon = "@drawable/fab_bg_image"-->
+        <!--android:title="Consumable Order"/>-->
+</menu>

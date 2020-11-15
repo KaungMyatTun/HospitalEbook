@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#8FBC8F"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="StartDate"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/startDate"
+        android:layout_marginLeft="0dp"
+        android:layout_weight="1.5"
+        android:paddingLeft="2dp"
+        android:paddingRight="3dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Drug"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/Drug"
+        android:layout_weight="2.3"
+        android:maxLines="3"/>
+    <!--<View-->
+        <!--android:id="@+id/line_separator2"-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:background="@android:color/darker_gray"/>-->
+
+    <TextView
+        android:id="@+id/Route"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Route"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:textSize="16dp"
+        android:layout_weight="1"
+        android:maxLines="2"/>
+
+    <!--<View-->
+        <!--android:id="@+id/line_separator3"-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:background="@android:color/darker_gray"/>-->
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Dosage"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/Dosage"
+        android:layout_weight="1.2"
+        android:maxLines="2"
+        android:paddingLeft="3dp"/>
+
+    <!--<View-->
+        <!--android:id="@+id/line_separator4"-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:background="@android:color/darker_gray"/>-->
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Units"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/Units"
+        android:singleLine="true"
+        android:layout_weight="1"/>
+
+    <!--<View-->
+        <!--android:id="@+id/line_separator5"-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:background="@android:color/darker_gray"/>-->
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Frequency"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/Frequency"
+        android:singleLine="true"
+        android:layout_weight="1.5"/>
+
+    <!--<View-->
+        <!--android:id="@+id/line_separator6"-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:background="@android:color/darker_gray"/>-->
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Duration"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/Duration"
+        android:singleLine="true"
+        android:layout_weight="1.3"/>
+
+    <!--<View-->
+        <!--android:id="@+id/line_separator7"-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:background="@android:color/darker_gray"/>-->
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Ordered By"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/Orderby"
+        android:layout_weight="1.5"
+        android:maxLines="3"/>
+
+    <!--<View-->
+        <!--android:id="@+id/line_separator8"-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:background="@android:color/darker_gray"/>-->
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Comment"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:id="@+id/Comment"
+        android:layout_weight="1.5"
+        android:paddingRight="5dp"
+        android:maxLines="3"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/order_detail_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Order Status - "/>
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:text="          Active"/>
+    </LinearLayout>
+</LinearLayout>

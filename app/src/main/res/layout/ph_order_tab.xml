@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id = "@+id/progressBar"
+        android:layout_centerInParent = "true"
+        android:visibility = "invisible"
+        android:layout_width = "80dp"
+        android:layout_height = "80dp"
+        app:mlpb_show_arrow = "false"
+        app:mlpb_arrow_height="10dp"
+        app:mlpb_arrow_width= "15dp"
+        app:mlpb_progress_stoke_width = "3dp"
+        app:mlpb_progress_text_visibility= "invisible" />
+
+    <RelativeLayout
+        android:id="@+id/heading_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_alignParentEnd="true"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/spinner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visit #:"
+            android:padding="10dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center_horizontal"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/visit_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:elevation="1dp"
+            app:cardCornerRadius="3dp"
+            android:innerRadius="0dp"
+            android:background="@drawable/table_cell_bg"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            android:layout_toRightOf="@+id/spinner_label">
+            <Spinner
+                android:id="@+id/visit_spinner_item"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/visit_spinner"
+                android:paddingLeft = "10dp" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <!--<ListView-->
+        <!--android:id="@+id/list_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_below="@+id/heading_part"/>-->
+    <LinearLayout
+        android:id="@+id/title"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#8FBC8F"
+        android:layout_below="@id/heading_part">
+        <!--<CheckBox-->
+            <!--android:id="@+id/PH_SelectItemCheckBox"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#ffffff"-->
+            <!--android:clickable="false"-->
+            <!--android:visibility="invisible"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="# "-->
+            <!--android:textStyle="bold"-->
+            <!--android:textSize="16dp"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:gravity="center"-->
+            <!--android:id="@+id/h_flag"-->
+            <!--android:layout_marginLeft="0dp"-->
+            <!--android:layout_weight=".4"/>-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="StartDate"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:id="@+id/h_Country"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1.5"
+            android:paddingLeft="2dp"
+            android:paddingRight="3dp"
+            android:maxLines="2"/>
+        <!--<View-->
+            <!--android:id="@+id/line_separator"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:background="@android:color/black"/>-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Drug"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:id="@+id/h_Capital"
+            android:layout_weight="2.3"
+            android:maxLines="3"/>
+
+        <!--<View-->
+            <!--android:id="@+id/line_separator2"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:background="@android:color/black"/>-->
+
+        <TextView
+            android:id="@+id/h_Route"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Route"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+        <!--<View-->
+            <!--android:id="@+id/line_separator3"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:background="@android:color/black"/>-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Dosage"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:id="@+id/h_Dossage"
+            android:layout_weight="1.2"
+            android:paddingLeft="6dp"/>
+        <!--<View-->
+            <!--android:id="@+id/line_separator4"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:background="@android:color/black"/>-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Units"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:id="@+id/h_Units"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"/>
+        <!--<View-->
+            <!--android:id="@+id/line_separator5"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:background="@android:color/black"/>-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Frequency"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:id="@+id/h_Frequency"
+            android:layout_weight="1.5"/>
+        <!--<View-->
+            <!--android:id="@+id/line_separator6"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:background="@android:color/black"/>-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Duration"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:id="@+id/h_Duration"
+            android:layout_weight="1.3"/>
+        <!--<View-->
+            <!--android:id="@+id/line_separator7"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:background="@android:color/black"/>-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Ordered By"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:id="@+id/h_Orderby"
+            android:layout_weight="1.5"/>
+        <!--<View-->
+            <!--android:id="@+id/line_separator8"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:background="@android:color/black"/>-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Comment"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:id="@+id/h_Comment"
+            android:layout_weight="1.5"
+            android:layout_marginRight="5dp"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_below="@id/title">
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

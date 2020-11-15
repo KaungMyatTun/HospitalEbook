@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.anzer.hospitalebook.models.views.ScannerView
+        android:id="@+id/scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:allow_frontcamera="true"
+        app:decode_interval="500"
+        app:reticle_fraction="0.5"
+        app:use_flash="false"
+        app:reticle_color="@android:color/holo_green_light" />
+
+</FrameLayout>

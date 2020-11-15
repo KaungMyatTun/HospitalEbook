@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="0"
+    tools:context=".LabAndDI.Lab_n_DI">
+
+    <LinearLayout
+        android:id="@+id/available_test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:animateLayoutChanges="true"
+        android:background="@color/gray_bg"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_half"
+        android:paddingTop="@dimen/padding_half"
+        android:paddingRight="@dimen/padding_half">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:paddingBottom="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:padding="10dp"
+                android:text="Available Tests"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/title_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="0dp"
+                    android:background="@drawable/curved_shape_for_dialog"
+                    android:gravity="center_horizontal">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/available_test_tabs"
+                        style="@style/customTabTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:fillViewport="false"
+                        app:tabGravity="fill"
+                        app:tabMaxWidth="0dp"
+                        app:tabMode="fixed"
+                        app:tabBackground="@color/colorPrimary"
+                        app:tabTextColor="@android:color/white" />
+
+                    <com.anzer.hospitalebook.models.adapters.CustomViewPager
+                        android:id="@+id/available_tests_vp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/available_test_tabs"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/tests_ordered_button_sheet"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

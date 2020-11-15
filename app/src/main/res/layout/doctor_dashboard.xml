@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eceff1">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextColor="@android:color/white">
+
+        <com.anzer.hospitalebook.models.views.ShakingBell
+            android:id="@+id/shakeBell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id = "@+id/progress_bar"
+        android:layout_centerInParent = "true"
+        android:visibility = "invisible"
+        android:layout_width = "80dp"
+        android:layout_height = "80dp"
+        app:mlpb_show_arrow = "false"
+        app:mlpb_arrow_height="10dp"
+        app:mlpb_arrow_width= "15dp"
+        app:mlpb_progress_stoke_width = "3dp"
+        app:mlpb_progress_text_visibility= "invisible" />
+
+    <TextView
+        android:id="@+id/dashboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Doctor Dashboard"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        />
+
+    <LinearLayout
+        android:id="@+id/register_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#eceff1"
+        android:layout_below="@+id/dashboard_title"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Type :"
+            android:textAppearance="@style/normal_font"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="22dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/yourcardid"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:elevation="1dp"
+            app:cardCornerRadius="3dp"
+            android:innerRadius="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:padding="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9" >
+            <Spinner
+                android:id="@+id/register_type_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:padding="10dp"
+                android:entries="@array/register_type"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/searview_id"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:elevation="1dp"
+            app:cardCornerRadius="3dp"
+            android:innerRadius="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:padding="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9">
+            <SearchView
+                android:id="@+id/cpi_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:queryBackground="@android:color/transparent"
+                android:layout_marginStart="5dp"
+                android:iconifiedByDefault="false"
+                android:queryHint="cpi search">
+            </SearchView>
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/scan_barcode_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight = "5dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:text= "@string/scan"
+            android:background = "#00ffffff"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/barcode_scanner_icon"
+            android:drawablePadding="0dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_type_layout"
+        android:paddingTop="0dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <TableLayout
+                android:id="@+id/patient_table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
+
