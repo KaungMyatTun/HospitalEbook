@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Boolean _isDoctorLoginFlag;
     public static ArrayList<DI_OrderedTestsModel> DI_OrderedTest;
     public static ArrayList<LAB_OrderedTestsModel> LAB_OrderedTest;
+    public static String voiceProgressNote = "";
 
 
     @Override

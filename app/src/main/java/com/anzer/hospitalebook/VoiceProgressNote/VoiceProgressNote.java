@@ -8,12 +8,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.speech.RecognizerIntent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.anzer.hospitalebook.MainActivity;
 import com.anzer.hospitalebook.R;
 
 import java.util.ArrayList;
@@ -30,6 +32,9 @@ public class VoiceProgressNote extends AppCompatActivity {
         setContentView(R.layout.fragment_voice_progress_note);
         resultTxt = findViewById(R.id.result_text);
         mic_btn = findViewById(R.id.mic);
+        if (MainActivity.voiceProgressNote != "") {
+            resultTxt.setText(MainActivity.voiceProgressNote);
+        }
 
         mic_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,5 +67,14 @@ public class VoiceProgressNote extends AppCompatActivity {
                 break;
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (resultTxt.getText().toString().trim().equals("")) {
+            MainActivity.voiceProgressNote = "";
+        } else
+            MainActivity.voiceProgressNote = resultTxt.getText().toString().replaceAll("[\r\n]+", "\n");
     }
 }

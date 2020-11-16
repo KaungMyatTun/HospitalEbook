@@ -26,12 +26,10 @@
             android:paddingTop="@dimen/padding_half"
             android:paddingRight="@dimen/padding_half">
 
-
             <RelativeLayout
                 android:id="@+id/detail_tile_card"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
-                android:layout_marginBottom="6dp"
                 android:background="@drawable/bg_card"
                 android:paddingBottom="2dp">
 
@@ -196,11 +194,54 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp"
                     android:background="@android:color/transparent"
                     android:text="See Detail"
+                    android:textSize="12dp"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panel_voiceProgressNote"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/voice_progress_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="Voice Progress Note"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/voice_progress_note_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@android:color/transparent"
+                    android:text="See Detail"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
 
             </LinearLayout>
 
@@ -208,7 +249,7 @@
                 android:id="@+id/detail_content_card"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:paddingBottom="2dp">

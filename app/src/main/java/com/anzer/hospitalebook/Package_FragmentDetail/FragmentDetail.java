@@ -133,15 +133,17 @@ public class FragmentDetail extends Fragment implements View.OnClickListener {
     ApiInterface apiInterface;
     int laID;
     Integer insertedImgCount = 0;
-    LinearLayout ordered_test_panel;
+    LinearLayout ordered_test_panel, voice_progress_note_panel;
     TextView ordered_test_count;
     StringBuffer test_to_show_on_ordered_test_panel;
-    Button seeDetailBtn;
+    Button seeDetailBtn, seeVoiceProgressNoteBtn;
+
 
     @Override
     public void onResume() {
         super.onResume();
         Log.e("OnResume", "Fragment is resumed");
+        // ordered test panel
         test_to_show_on_ordered_test_panel.delete(0, test_to_show_on_ordered_test_panel.length());
         if (MainActivity.DI_OrderedTest.size() > 0) {
             test_to_show_on_ordered_test_panel.append("DI [" + MainActivity.DI_OrderedTest.size() + " Tests]");
@@ -154,6 +156,13 @@ public class FragmentDetail extends Fragment implements View.OnClickListener {
         } else {
             ordered_test_panel.setVisibility(View.VISIBLE);
             ordered_test_count.setText(test_to_show_on_ordered_test_panel);
+        }
+
+        // voice progress note panel
+        if(MainActivity.voiceProgressNote != ""){
+            voice_progress_note_panel.setVisibility(View.VISIBLE);
+        }else{
+            voice_progress_note_panel.setVisibility(View.GONE);
         }
     }
 
@@ -199,6 +208,7 @@ public class FragmentDetail extends Fragment implements View.OnClickListener {
         pt_visitno.setText(patient_visit_no);
         pt_regDate.setText(patient_reg_date);
 
+        // ordered test panel
         ordered_test_panel = view.findViewById(R.id.panel_ordered_tests);
         ordered_test_count = view.findViewById(R.id.test_count);
         test_to_show_on_ordered_test_panel = new StringBuffer();
@@ -222,6 +232,22 @@ public class FragmentDetail extends Fragment implements View.OnClickListener {
             ordered_test_panel.setVisibility(View.VISIBLE);
             ordered_test_count.setText(test_to_show_on_ordered_test_panel);
         }
+
+        // voice progress note panel
+        voice_progress_note_panel = view.findViewById(R.id.panel_voiceProgressNote);
+        seeVoiceProgressNoteBtn = view.findViewById(R.id.voice_progress_note_detail);
+        seeVoiceProgressNoteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                voidProgressNote();
+            }
+        });
+        if(MainActivity.voiceProgressNote != ""){
+            voice_progress_note_panel.setVisibility(View.VISIBLE);
+        }else{
+            voice_progress_note_panel.setVisibility(View.GONE);
+        }
+
 
         return view;
     }
